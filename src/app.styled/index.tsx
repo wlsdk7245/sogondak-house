@@ -7,12 +7,11 @@ export const GlobalStyle = createGlobalStyle`
     }
 
     body {
+        width: 100%;
         max-width: 100vw;
-        min-width: 100vw;
-        width: 100vw;
           &::-webkit-scrollbar {
-    display: none;
-  }
+        display: none;
+        }
     }
 
     
