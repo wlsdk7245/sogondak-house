@@ -52,16 +52,22 @@ const StyledWrapper = styled.div`
   color: gray;
   position: responsive;
 
-  img {
-    position: relative !important;
-    max-height: calc(100vh - 260px);
-    object-fit: cover;
-    object-position: bottom;
+  .ant-carousel {
+    height: 100%;
 
-    @media (max-width: 1024px) {
-      height: 100% !important;
-      width: 100%;
+    .slick-slider {
+      overflow: hidden;
+      height: 100%;
     }
+  }
+
+  img {
+    max-height: calc(100vh - 400px);
+    position: relative !important;
+    object-fit: cover;
+    min-height: 480px;
+    height: 1000;
+    object-position: bottom;
   }
 
   .description {
