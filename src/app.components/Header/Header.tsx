@@ -33,12 +33,7 @@ const Header = () => {
           ABOUT
         </div>
         <Dropdown overlay={<HeaderRoomModal />}>
-          <div
-            onClick={() => router.push('/room')}
-            className={`menu-item ${router.pathname === '/room'}`}
-          >
-            ROOM
-          </div>
+          <div className={`menu-item ${router.pathname === '/room'}`}>ROOM</div>
         </Dropdown>
         <Link
           href="/reservation"
