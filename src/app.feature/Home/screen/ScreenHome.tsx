@@ -6,7 +6,7 @@ import { Carousel } from 'antd';
 const ScreenHome = () => {
   return (
     <StyledWrapper>
-      <Carousel autoplay>
+      <Carousel autoplay effect="fade">
         <img src="/images/home/main_1.jpeg" />
         <img src="/images/home/main_2.jpeg" />
         <img src="/images/home/main_3.jpeg" />
