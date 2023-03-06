@@ -1,7 +1,7 @@
+import Footer from 'app.components/Footer/Footer';
+import Header from 'app.components/Header/Header';
 import React from 'react';
 import styled from 'styled-components';
-import Footer from '../Footer/Footer';
-import Header from '../Header/Header';
 
 type TProps = {
   children: JSX.Element;
