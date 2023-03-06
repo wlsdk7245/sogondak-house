@@ -1,6 +1,6 @@
 import { css } from 'styled-components';
 
-const resetCSS = css`
+const Reset = css`
   html,
   body,
   div,
@@ -88,9 +88,10 @@ const resetCSS = css`
     padding: 0;
     border: 0;
     font: inherit;
-    font-family: 'Noto Sans KR', 'ITC Avant Garde Gothic Std Book',
-      -apple-system, BlinkMacSystemFont, helvetica, Apple SD Gothic Neo,
-      sans-serif;
+    font-family: 'Poppins', 'Spoqa Han Sans Neo', -apple-systemsystem,
+      BlinkMacSystemFont, Apple SD Gothic Neo, sans-serif;
+    //font-family: 'Roboto', 'Spoqa Han Sans Neo', -apple-systemsystem, BlinkMacSystemFont, Apple SD Gothic Neo, sans-serif;
+    // font-family: 'Roboto', 'Noto Sans KR', -apple-system, BlinkMacSystemFont, Apple SD Gothic Neo, sans-serif;
     vertical-align: baseline;
     box-sizing: border-box;
   }
@@ -109,33 +110,36 @@ const resetCSS = css`
     display: block;
   }
 
-  button {
-    border: none;
-    background: #ddd;
+  html {
+    font-size: 10px;
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0.4);
+  }
+
+  body {
+    -webkit-text-size-adjust: none;
   }
 
   a {
     -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
     text-decoration: none;
-    color: #000;
   }
 
   b {
     font-weight: bold;
   }
 
-  // html { font-size: 62.5%; // 1.2rem === 12px }
-  /* clears the 'X' from Internet Explorer */
   input[type='search']::-ms-clear {
     display: none;
     width: 0;
     height: 0;
   }
+
   input[type='search']::-ms-reveal {
     display: none;
     width: 0;
     height: 0;
   }
+
   input[type='search']::-webkit-search-decoration,
   input[type='search']::-webkit-search-cancel-button,
   input[type='search']::-webkit-search-results-button,
@@ -143,22 +147,12 @@ const resetCSS = css`
     display: none;
   }
 
-  @font-face {
-    font-family: 'adbgothic';
-    src: url('./ITC Avant Garde Gothic Book Regular.otf');
-  }
-
-  input[type='search'],
-  input[type='text'],
-  input[type='password'] {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-  }
-
   input {
+    outline: none;
     box-sizing: border-box;
-    outline: none !important;
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
   }
 
   input,
@@ -167,15 +161,8 @@ const resetCSS = css`
     font-size: 16px !important;
   }
 
-  textarea {
-    border: none;
-
-    &:active {
-      border: none;
-    }
-  }
-
   button {
+    cursor: pointer;
     outline: none;
   }
 
@@ -206,23 +193,15 @@ const resetCSS = css`
     width: 100%;
   }
 
-  html {
-    background-color: #fff;
-    user-select: none;
-    -webkit-tap-highlight-color: rgba(255, 255, 255, 0.4);
-  }
-
-  body {
-    line-height: 1;
-    width: 100%;
-    max-width: 100vw;
-    -webkit-text-size-adjust: none;
+  * {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-tap-highlight-color: transparent;
   }
 
   ::placeholder {
-    color: #d8d8d8;
-    font-size: 13px;
+    color: #aaaaaa;
+    font-size: 15px;
   }
 `;
 
-export default resetCSS;
+export default Reset;

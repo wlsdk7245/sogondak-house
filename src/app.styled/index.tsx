@@ -1,5 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
-import resetCSS from './resetCss';
+import Reset from './resetCss';
 
 export const GlobalStyle = createGlobalStyle`
     :root {
@@ -8,12 +8,11 @@ export const GlobalStyle = createGlobalStyle`
 
     body {
         width: 100%;
-        max-width: 100vw;
           &::-webkit-scrollbar {
         display: none;
         }
     }
 
     
-    ${resetCSS};    
+    ${Reset};    
 `;
