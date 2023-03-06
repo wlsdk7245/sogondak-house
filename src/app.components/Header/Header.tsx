@@ -65,6 +65,7 @@ const StyledWrapper = styled.div`
   position: sticky;
   top: 0;
   left: 0;
+  z-index: 100;
 
   .header-bottom {
     width: 100%;
