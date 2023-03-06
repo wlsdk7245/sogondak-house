@@ -24,6 +24,7 @@ const StyledWrapper = styled.div`
   width: 100%;
 
   .layout-content {
+    width: 100%;
     margin: 0 auto;
     height: 100%;
     min-height: calc(100vh - 110px);

@@ -1,22 +1,42 @@
+import Link from 'next/link';
+import { useRouter } from 'next/router';
 import React from 'react';
 import styled from 'styled-components';
 
 const Header = () => {
+  const router = useRouter();
   return (
     <StyledWrapper>
       <div className="header-top">
-        <div className="logo-left">
+        <Link href="/" className="logo-left">
           <img src="/images/common/logo-big.png" />
-        </div>
+        </Link>
         <div className="logo-right">
           <img src="/images/common/logo-letter.png" />
         </div>
       </div>
       <div className="header-bottom">
-        <div className="menu-item">HOME</div>
-        <div className="menu-item">ABOUT</div>
-        <div className="menu-item">ROOM</div>
-        <div className="menu-item">RESERVATION</div>
+        <Link href="/" className={`menu-item ${router.pathname === '/'}`}>
+          HOME
+        </Link>
+        <Link
+          href="/about"
+          className={`menu-item ${router.pathname === '/about'}`}
+        >
+          ABOUT
+        </Link>
+        <Link
+          href="/room"
+          className={`menu-item ${router.pathname === '/room'}`}
+        >
+          ROOM
+        </Link>
+        <Link
+          href="/reservation"
+          className={`menu-item ${router.pathname === '/reservation'}`}
+        >
+          RESERVATION
+        </Link>
       </div>
     </StyledWrapper>
   );
@@ -27,8 +47,10 @@ export default Header;
 const StyledWrapper = styled.div`
   position: sticky;
   top: 0;
+  width: 100%;
 
   .header-bottom {
+    width: 100%;
     height: 40px;
     display: flex;
     justify-content: space-between;
@@ -42,6 +64,12 @@ const StyledWrapper = styled.div`
       color: rgb(255, 51, 175);
       transition: 200ms;
       cursor: pointer;
+      padding: 4px 8px;
+
+      &.true {
+        color: white;
+        background-color: #6e83ff;
+      }
 
       &:hover {
         opacity: 0.3;
@@ -50,6 +78,7 @@ const StyledWrapper = styled.div`
   }
 
   .header-top {
+    width: 100%;
     background-color: #cfd1e2;
     display: flex;
     height: 72px;
