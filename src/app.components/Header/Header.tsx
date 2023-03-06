@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import { InstagramOutlined } from '@ant-design/icons';
 
 const Header = () => {
   return (
@@ -41,11 +40,17 @@ const StyledWrapper = styled.div`
       font-size: 12px;
       letter-spacing: -1px;
       color: rgb(255, 51, 175);
+      transition: 200ms;
+      cursor: pointer;
+
+      &:hover {
+        opacity: 0.3;
+      }
     }
   }
 
   .header-top {
-    background-color: rgb(190, 205, 220);
+    background-color: #cfd1e2;
     display: flex;
     height: 72px;
     justify-content: space-between;
