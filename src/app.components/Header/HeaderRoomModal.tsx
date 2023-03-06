@@ -5,9 +5,10 @@ import styled from 'styled-components';
 const HeaderRoomModal = () => {
   const router = useRouter();
 
-  const handleClickRoom = (link) => () => {
+  const handleClickRoom = (link: string) => () => {
     router.push(link);
   };
+
   return (
     <StyledWrapper
       className="room-hover-modal"
