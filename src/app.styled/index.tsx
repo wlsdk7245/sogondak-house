@@ -1,5 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
-import resetCSS from './resetCss.ts';
+import resetCSS from './resetCss';
 
 export const GlobalStyle = createGlobalStyle`
     :root {
