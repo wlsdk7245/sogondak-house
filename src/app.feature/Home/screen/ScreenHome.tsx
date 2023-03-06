@@ -19,6 +19,7 @@ const ScreenHome = () => {
       <Carousel autoplay effect="fade">
         {ArrImage.map((img, idx) => (
           <Image
+            placeholder="blur"
             key={`main-image-${idx}`}
             alt={`main-image-${idx}`}
             fill
