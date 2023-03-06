@@ -3,7 +3,8 @@ import Reset from './resetCss';
 
 export const GlobalStyle = createGlobalStyle`
     :root {
-        --color-main: #e1e1e1;
+        --color-main: #FF008C;
+        --color-sub: #628AED;
     }
 
     body {
@@ -15,4 +16,6 @@ export const GlobalStyle = createGlobalStyle`
 
     
     ${Reset};    
+
+
 `;

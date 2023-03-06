@@ -12,47 +12,30 @@ const Header = () => {
           <img src="/images/common/logo-big.png" />
         </Link>
         <div className="logo-right">
-          <img src="/images/common/logo-letter.png" />
+          <img src="/images/common/logo-letter-black.png" />
         </div>
       </div>
       <div className="header-bottom">
         <Link href="/" className={`menu-item ${router.pathname === '/'}`}>
-          <img
-            alt="about"
-            src={`/images/layout/home${
-              router.pathname === '/' ? '-white' : ''
-            }.png`}
-          />
+          HOME
         </Link>
         <Link
           href="/about"
           className={`menu-item ${router.pathname === '/about'}`}
         >
-          <img
-            src={`/images/layout/about${
-              router.pathname === '/about' ? '-white' : ''
-            }.png`}
-          />
+          ABOUT
         </Link>
         <Link
           href="/room"
           className={`menu-item ${router.pathname === '/room'}`}
         >
-          <img
-            src={`/images/layout/room${
-              router.pathname === '/room' ? '-white' : ''
-            }.png`}
-          />{' '}
+          ROOM
         </Link>
         <Link
           href="/reservation"
           className={`menu-item ${router.pathname === '/reservation'}`}
         >
-          <img
-            src={`/images/layout/reservation${
-              router.pathname === '/reservation' ? '-white' : ''
-            }.png`}
-          />
+          RESERVATION
         </Link>
       </div>
     </StyledWrapper>
@@ -82,12 +65,14 @@ const StyledWrapper = styled.div`
     }
 
     .menu-item {
-      display: -webkit-box !important;
-      transition: 200ms;
+      transition: 300ms;
+      font-size: 13px;
+      color: var(--color-main);
       cursor: pointer;
       padding: 4px 8px;
       display: flex;
       align-items: center;
+      border-bottom: 1.5px solid transparent;
 
       img {
         width: auto;
@@ -100,19 +85,20 @@ const StyledWrapper = styled.div`
       }
 
       &.true {
-        color: white;
-        background-color: #fc1d29;
+        border-bottom: 1.5px solid var(--color-main);
       }
 
-      &:hover {
-        opacity: 0.3;
+      @media (hover: hover) {
+        &:hover {
+          opacity: 0.3;
+        }
       }
     }
   }
 
   .header-top {
     width: 100%;
-    background-color: #cfd1e2;
+    background-color: white;
     display: flex;
     height: 72px;
     justify-content: space-between;
@@ -123,6 +109,18 @@ const StyledWrapper = styled.div`
       height: 100%;
       text-align: center;
       width: auto;
+
+      img {
+        width: auto;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+
+    .logo-right {
+      height: 100%;
+      width: auto;
+      padding: 10px 0;
 
       img {
         width: auto;
