@@ -88,8 +88,9 @@ const resetCSS = css`
     padding: 0;
     border: 0;
     font: inherit;
-    font-family: 'Noto Sans KR', 'Lato', -apple-system, BlinkMacSystemFont,
-      helvetica, Apple SD Gothic Neo, sans-serif;
+    font-family: 'Noto Sans KR', 'ITC Avant Garde Gothic Std Book',
+      -apple-system, BlinkMacSystemFont, helvetica, Apple SD Gothic Neo,
+      sans-serif;
     vertical-align: baseline;
     box-sizing: border-box;
   }
@@ -140,6 +141,11 @@ const resetCSS = css`
   input[type='search']::-webkit-search-results-button,
   input[type='search']::-webkit-search-results-decoration {
     display: none;
+  }
+
+  @font-face {
+    font-family: 'adbgothic';
+    src: url('./ITC Avant Garde Gothic Book Regular.otf');
   }
 
   input[type='search'],
@@ -208,7 +214,8 @@ const resetCSS = css`
 
   body {
     line-height: 1;
-    margin: 0px auto;
+    width: 100%;
+    max-width: 100vw;
     -webkit-text-size-adjust: none;
   }
 

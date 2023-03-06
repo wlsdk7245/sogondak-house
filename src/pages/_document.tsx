@@ -44,6 +44,10 @@ class MyDocument extends Document {
       <Html lang="ko">
         <Head>
           <meta charSet="utf-8" />
+          <link
+            href="https://fonts.cdnfonts.com/css/itc-avant-garde-gothic-std-book"
+            rel="stylesheet"
+          />
         </Head>
         <body>
           <Main />

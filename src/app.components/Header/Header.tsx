@@ -17,25 +17,41 @@ const Header = () => {
       </div>
       <div className="header-bottom">
         <Link href="/" className={`menu-item ${router.pathname === '/'}`}>
-          HOME
+          <img
+            src={`/images/layout/home${
+              router.pathname === '/' ? '-white' : ''
+            }.png`}
+          />{' '}
         </Link>
         <Link
           href="/about"
           className={`menu-item ${router.pathname === '/about'}`}
         >
-          ABOUT
+          <img
+            src={`/images/layout/about${
+              router.pathname === '/about' ? '-white' : ''
+            }.png`}
+          />
         </Link>
         <Link
           href="/room"
           className={`menu-item ${router.pathname === '/room'}`}
         >
-          ROOM
+          <img
+            src={`/images/layout/room${
+              router.pathname === '/room' ? '-white' : ''
+            }.png`}
+          />{' '}
         </Link>
         <Link
           href="/reservation"
           className={`menu-item ${router.pathname === '/reservation'}`}
         >
-          RESERVATION
+          <img
+            src={`/images/layout/reservation${
+              router.pathname === '/reservation' ? '-white' : ''
+            }.png`}
+          />{' '}
         </Link>
       </div>
     </StyledWrapper>
@@ -57,18 +73,31 @@ const StyledWrapper = styled.div`
     align-items: center;
     padding: 0 32px;
     background-color: white;
+    transition: 200ms;
+
+    @media (max-width: 425px) {
+      padding: 0 12px;
+    }
 
     .menu-item {
-      font-size: 12px;
-      letter-spacing: -1px;
-      color: rgb(255, 51, 175);
       transition: 200ms;
       cursor: pointer;
       padding: 4px 8px;
+      display: flex;
+      align-items: center;
+
+      img {
+        height: 10px;
+        transition: 200ms;
+
+        @media (max-width: 425px) {
+          height: 9px;
+        }
+      }
 
       &.true {
         color: white;
-        background-color: #6e83ff;
+        background-color: #fc1d29;
       }
 
       &:hover {

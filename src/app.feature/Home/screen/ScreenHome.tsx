@@ -38,6 +38,8 @@ const StyledWrapper = styled.div`
     display: flex;
     flex-direction: column;
     gap: 40px;
+    line-height: 1.7;
+
     .desc-part {
       text-align: center;
     }
