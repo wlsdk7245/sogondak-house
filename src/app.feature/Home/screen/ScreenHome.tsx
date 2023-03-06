@@ -1,13 +1,18 @@
 import Link from 'next/link';
 import React from 'react';
 import styled from 'styled-components';
+import { Carousel } from 'antd';
 
 const ScreenHome = () => {
   return (
     <StyledWrapper>
-      <div className="main-image">
-        <img src="/images/common/main.jpeg" />
-      </div>
+      <Carousel autoplay>
+        <img src="/images/home/main_1.jpeg" />
+        <img src="/images/home/main_2.jpeg" />
+        <img src="/images/home/main_3.jpeg" />
+        <img src="/images/home/main_4.jpeg" />
+        <img src="/images/home/main_5.jpeg" />
+      </Carousel>
       <div className="description">
         <div className="desc-part">
           아름다운 섬 제주 동쪽, 변하는 계절에 맞춰 새로운 옷을 입는 서우봉과

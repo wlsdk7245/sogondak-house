@@ -43,6 +43,7 @@ class MyDocument extends Document {
     return (
       <Html lang="ko">
         <Head>
+          <meta name="format-detection" content="no" />
           <meta charSet="utf-8" />
           <link
             href="https://fonts.cdnfonts.com/css/itc-avant-garde-gothic-std-book"

@@ -12,7 +12,7 @@ const Footer = () => {
 
       <div className="footer-info-wrap">
         <div className="footer-info-item">
-          사업자등록번호 : 403 - 51 - 00410
+          {`사업자등록번호 : 403 - 51 - 00410`}
         </div>
       </div>
 
