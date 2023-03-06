@@ -22,6 +22,7 @@ export default Layout;
 const StyledWrapper = styled.div`
   height: 100%;
   width: 100%;
+  min-width: 280px;
 
   .layout-content {
     width: 100%;

@@ -2,6 +2,8 @@ import Link from 'next/link';
 import React from 'react';
 import styled from 'styled-components';
 import { Carousel } from 'antd';
+import Image from 'next/image';
+import mainOne from '../../../../public/images/home/main_1.jpeg';
 
 const ScreenHome = () => {
   return (
@@ -36,6 +38,19 @@ const ScreenHome = () => {
 const StyledWrapper = styled.div`
   width: 100%;
   color: gray;
+  position: responsive;
+
+  img {
+    position: relative !important;
+    max-height: 768px;
+    object-fit: cover;
+    object-position: bottom;
+
+    @media (max-width: 1024px) {
+      height: 100% !important;
+      width: 100%;
+    }
+  }
 
   .description {
     padding: 40px;
