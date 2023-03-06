@@ -18,10 +18,11 @@ const Header = () => {
       <div className="header-bottom">
         <Link href="/" className={`menu-item ${router.pathname === '/'}`}>
           <img
+            alt="about"
             src={`/images/layout/home${
               router.pathname === '/' ? '-white' : ''
             }.png`}
-          />{' '}
+          />
         </Link>
         <Link
           href="/about"
@@ -51,7 +52,7 @@ const Header = () => {
             src={`/images/layout/reservation${
               router.pathname === '/reservation' ? '-white' : ''
             }.png`}
-          />{' '}
+          />
         </Link>
       </div>
     </StyledWrapper>
@@ -63,7 +64,7 @@ export default Header;
 const StyledWrapper = styled.div`
   position: sticky;
   top: 0;
-  width: 100%;
+  left: 0;
 
   .header-bottom {
     width: 100%;
@@ -80,6 +81,7 @@ const StyledWrapper = styled.div`
     }
 
     .menu-item {
+      display: -webkit-box !important;
       transition: 200ms;
       cursor: pointer;
       padding: 4px 8px;
@@ -87,6 +89,7 @@ const StyledWrapper = styled.div`
       align-items: center;
 
       img {
+        width: auto;
         height: 10px;
         transition: 200ms;
 
@@ -117,10 +120,11 @@ const StyledWrapper = styled.div`
 
     .logo-left {
       height: 100%;
-      width: 100%;
+      text-align: center;
+      width: auto;
 
       img {
-        width: fit-content;
+        width: auto;
         height: 100%;
         object-fit: contain;
       }
