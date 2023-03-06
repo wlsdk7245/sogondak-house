@@ -5,15 +5,27 @@ import { Carousel } from 'antd';
 import Image from 'next/image';
 import mainOne from '../../../../public/images/home/main_1.jpeg';
 
+const ArrImage = [
+  'https://velog.velcdn.com/images/wlsdk0313/post/00a14981-8942-422f-bc70-0799559b1dd0/image.jpeg',
+  'https://velog.velcdn.com/images/wlsdk0313/post/0a23d637-5b9d-4a36-bdff-45ac0fe8025b/image.jpeg',
+  'https://velog.velcdn.com/images/wlsdk0313/post/3df472b8-ee57-4572-a839-ab0f8c880ba9/image.jpeg',
+  'https://velog.velcdn.com/images/wlsdk0313/post/7f199a21-e4c5-42c5-84fc-c6ec775ee6b8/image.jpeg',
+  'https://velog.velcdn.com/images/wlsdk0313/post/7dc36b43-9e44-436c-b570-7b85c3c5e274/image.jpeg',
+];
+
 const ScreenHome = () => {
   return (
     <StyledWrapper>
       <Carousel autoplay effect="fade">
-        <img src="/images/home/main_1.jpeg" />
-        <img src="/images/home/main_2.jpeg" />
-        <img src="/images/home/main_3.jpeg" />
-        <img src="/images/home/main_4.jpeg" />
-        <img src="/images/home/main_5.jpeg" />
+        {ArrImage.map((img, idx) => (
+          <Image
+            key={`main-image-${idx}`}
+            alt={`main-image-${idx}`}
+            fill
+            src={img}
+            blurDataURL={img}
+          />
+        ))}
       </Carousel>
       <div className="description">
         <div className="desc-part">
@@ -42,7 +54,7 @@ const StyledWrapper = styled.div`
 
   img {
     position: relative !important;
-    max-height: 768px;
+    max-height: calc(100vh - 260px);
     object-fit: cover;
     object-position: bottom;
 
