@@ -88,10 +88,9 @@ const Reset = css`
     padding: 0;
     border: 0;
     font: inherit;
-    font-family: 'Poppins', 'Spoqa Han Sans Neo', -apple-systemsystem,
-      BlinkMacSystemFont, Apple SD Gothic Neo, sans-serif;
     //font-family: 'Roboto', 'Spoqa Han Sans Neo', -apple-systemsystem, BlinkMacSystemFont, Apple SD Gothic Neo, sans-serif;
-    // font-family: 'Roboto', 'Noto Sans KR', -apple-system, BlinkMacSystemFont, Apple SD Gothic Neo, sans-serif;
+    font-family: 'gothicBook', 'Noto Sans KR', -apple-system, BlinkMacSystemFont,
+      Apple SD Gothic Neo, sans-serif;
     vertical-align: baseline;
     box-sizing: border-box;
   }

@@ -1,10 +1,13 @@
-import Link from 'next/link';
-import { useRouter } from 'next/router';
 import React from 'react';
+import Link from 'next/link';
 import styled from 'styled-components';
+import { Dropdown } from 'antd';
+import { useRouter } from 'next/router';
+import HeaderRoomModal from './HeaderRoomModal';
 
 const Header = () => {
   const router = useRouter();
+
   return (
     <StyledWrapper>
       <div className="header-top">
@@ -15,22 +18,28 @@ const Header = () => {
           <img src="/images/common/logo-letter-black.png" />
         </div>
       </div>
+
       <div className="header-bottom">
-        <Link href="/" className={`menu-item ${router.pathname === '/'}`}>
+        <div
+          onClick={() => router.push('/')}
+          className={`menu-item ${router.pathname === '/'}`}
+        >
           HOME
-        </Link>
-        <Link
-          href="/about"
+        </div>
+        <div
+          onClick={() => router.push('/about')}
           className={`menu-item ${router.pathname === '/about'}`}
         >
           ABOUT
-        </Link>
-        <Link
-          href="/room"
-          className={`menu-item ${router.pathname === '/room'}`}
-        >
-          ROOM
-        </Link>
+        </div>
+        <Dropdown overlay={<HeaderRoomModal />}>
+          <div
+            onClick={() => router.push('/room')}
+            className={`menu-item ${router.pathname === '/room'}`}
+          >
+            ROOM
+          </div>
+        </Dropdown>
         <Link
           href="/reservation"
           className={`menu-item ${router.pathname === '/reservation'}`}
@@ -50,6 +59,11 @@ const StyledWrapper = styled.div`
   left: 0;
   z-index: 100;
 
+  .ant-menu-horizontal {
+    height: 40px;
+    border-bottom: none !important;
+  }
+
   .header-bottom {
     width: 100%;
     height: 40px;
@@ -65,24 +79,15 @@ const StyledWrapper = styled.div`
     }
 
     .menu-item {
+      position: relative;
       transition: 300ms;
       font-size: 13px;
       color: var(--color-main);
       cursor: pointer;
       padding: 4px 8px;
       display: flex;
-      align-items: center;
+      text-align: center;
       border-bottom: 1.5px solid transparent;
-
-      img {
-        width: auto;
-        height: 10px;
-        transition: 200ms;
-
-        @media (max-width: 425px) {
-          height: 9px;
-        }
-      }
 
       &.true {
         border-bottom: 1.5px solid var(--color-main);
@@ -90,7 +95,13 @@ const StyledWrapper = styled.div`
 
       @media (hover: hover) {
         &:hover {
-          opacity: 0.3;
+          color: var(--color-main-hover);
+        }
+      }
+
+      &:hover {
+        .room-hover-modal {
+          opacity: 1;
         }
       }
     }
