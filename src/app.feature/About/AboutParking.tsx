@@ -7,7 +7,8 @@ const AboutParking = () => {
       <div className="title">주차 안내</div>
       <div className="content">
         <div>
-          건물 1층 카페 '호다' 앞 주차장에 총 2대의 차량 주차가 가능합니다.
+          건물 1층 카페 {`'`}호다{`'`} 앞 주차장에 총 2대의 차량 주차가
+          가능합니다.
         </div>
         <div>
           건물 왼편 전용 주차장에도 2-3대 주차가 가능하고, 모두 주차가 되어있을
