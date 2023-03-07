@@ -10,7 +10,7 @@ const { Panel } = Collapse;
 const ScreenReservation = () => {
   return (
     <StyledWrapper>
-      <Collapse ghost>
+      <Collapse ghost accordion>
         <Panel key="1" header="객실 요금 안내">
           <ReservationPanelCost />
         </Panel>
@@ -52,8 +52,5 @@ const StyledWrapper = styled.div`
 
   .ant-collapse-header-text {
     font-weight: 800;
-  }
-
-  .reservation-panel-room {
   }
 `;

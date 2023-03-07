@@ -6,6 +6,7 @@ import Document, {
   NextScript,
   DocumentContext,
 } from 'next/document';
+import Script from 'next/script';
 import { ServerStyleSheet } from 'styled-components';
 
 class MyDocument extends Document {
@@ -45,6 +46,7 @@ class MyDocument extends Document {
         <Head>
           <meta name="format-detection" content="no" />
           <meta charSet="utf-8" />
+
           <link
             href="https://fonts.cdnfonts.com/css/itc-avant-garde-gothic-std-book"
             rel="stylesheet"

@@ -1,8 +1,13 @@
+import ScreenAbout from 'app.feature/About/ScreenAbout';
 import React from 'react';
 import styled from 'styled-components';
 
 const PageAbout = () => {
-  return <StyledWrapper>ABOUT 페이지</StyledWrapper>;
+  return (
+    <StyledWrapper>
+      <ScreenAbout />
+    </StyledWrapper>
+  );
 };
 
 export default PageAbout;

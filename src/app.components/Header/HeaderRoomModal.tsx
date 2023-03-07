@@ -2,11 +2,16 @@ import { useRouter } from 'next/router';
 import React from 'react';
 import styled from 'styled-components';
 
-const HeaderRoomModal = () => {
+type TProps = {
+  handleOpenChange: (flag: boolean) => void;
+};
+
+const HeaderRoomModal: React.FC<TProps> = ({ handleOpenChange }) => {
   const router = useRouter();
 
   const handleClickRoom = (link: string) => () => {
     router.push(link);
+    handleOpenChange(false);
   };
 
   return (

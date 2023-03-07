@@ -7,7 +7,7 @@ const { Panel } = Collapse;
 const ReservationPanelCost = () => {
   return (
     <StyledWrapper>
-      <Collapse ghost>
+      <Collapse ghost accordion>
         <Panel key="1" header="비수기">
           <img src="/images/reservation/비수기.jpeg" />
         </Panel>

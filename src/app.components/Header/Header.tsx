@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Link from 'next/link';
 import styled from 'styled-components';
 import { Dropdown } from 'antd';
@@ -6,7 +6,13 @@ import { useRouter } from 'next/router';
 import HeaderRoomModal from './HeaderRoomModal';
 
 const Header = () => {
+  const [isOpenDropdown, setIsOpenDropdown] = useState(false);
+
   const router = useRouter();
+
+  const handleOpenChange = (flag: boolean) => {
+    setIsOpenDropdown(flag);
+  };
 
   return (
     <StyledWrapper>
@@ -32,7 +38,11 @@ const Header = () => {
         >
           ABOUT
         </div>
-        <Dropdown overlay={<HeaderRoomModal />}>
+        <Dropdown
+          overlay={<HeaderRoomModal handleOpenChange={setIsOpenDropdown} />}
+          open={isOpenDropdown}
+          onOpenChange={handleOpenChange}
+        >
           <div className={`menu-item ${router.pathname === '/room'}`}>ROOM</div>
         </Dropdown>
         <Link
