@@ -10,8 +10,11 @@ const RoomInfoBox: React.FC<typeRoomInfo> = (props) => {
     <StyledWrapper>
       <div className="room-photo-list">
         <Carousel autoplay effect="fade">
-          {photo.map((item) => (
-            <img src={`/images/room/${item}`} />
+          {photo.map((item, idx) => (
+            <img
+              key={`room-${number}-photo-${idx}`}
+              src={`/images/room/${item}`}
+            />
           ))}
         </Carousel>
       </div>
