@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import styled from 'styled-components';
 
-declare let any: any;
+declare let naver: any;
 
 const AboutMap = () => {
   const mapRef = useRef<HTMLElement | null | any>(null);
@@ -23,6 +23,9 @@ const AboutMap = () => {
   return (
     <StyledWrapper>
       <div id="map"></div>
+      <div className="address">
+        제주특별자치도 제주시 조천읍 신북로497, 소곤닥하우스
+      </div>
     </StyledWrapper>
   );
 };
@@ -44,5 +47,14 @@ const StyledWrapper = styled.div`
   #map {
     width: 100%;
     height: 400px;
+    margin-bottom: 8px;
+  }
+
+  .address {
+    color: var(--color-main);
+    font-size: 13px;
+    text-align: center;
+    font-family: Noto Sans;
+    font-weight: 700;
   }
 `;
