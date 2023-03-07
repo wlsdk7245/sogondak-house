@@ -12,7 +12,7 @@ const AboutCafe = () => {
         </div>
         <div>
           (호다 인스타그램을 참고해주세요.{' '}
-          <a href="https://www.instagram.com/hoda___official" target="_blank">
+          <a href="https://www.instagram.com/hoda____official/" target="_blank">
             @hoda___official
           </a>
           ) - 수요일 정기 휴무
