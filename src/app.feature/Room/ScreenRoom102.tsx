@@ -1,8 +1,16 @@
 import React from 'react';
 import styled from 'styled-components';
+import RoomInfoBox from './RoomInfoBox';
+import { ObjectRoom } from './ObjectRoom';
 
 const ScreenRoom102 = () => {
-  return <StyledWrapper>102</StyledWrapper>;
+  const roomInfo102 = ObjectRoom['102'];
+
+  return (
+    <StyledWrapper>
+      <RoomInfoBox {...roomInfo102} />
+    </StyledWrapper>
+  );
 };
 
 const StyledWrapper = styled.div``;
