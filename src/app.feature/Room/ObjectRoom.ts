@@ -26,7 +26,12 @@ export const ObjectRoom = {
   },
   102: {
     photo: [
-      'https://velog.velcdn.com/images/wlsdk0313/post/4fc07dcf-a72e-4d48-a49a-41e09b9e0468/image.jpg',
+      'https://velog.velcdn.com/images/wlsdk0313/post/4f04dfe8-c3f2-4386-a50e-49a25f0056fd/image.jpg',
+      'https://velog.velcdn.com/images/wlsdk0313/post/ce70ddf0-97a3-401b-8999-61c5010157da/image.jpg',
+      'https://velog.velcdn.com/images/wlsdk0313/post/90cae741-5e4a-40de-994b-9311f9f3d23b/image.jpg',
+      'https://velog.velcdn.com/images/wlsdk0313/post/c1313b8e-bcf0-4567-bb1d-94b08ebce713/image.jpg',
+      'https://velog.velcdn.com/images/wlsdk0313/post/1f6f58a3-4cd9-4d95-a424-446c73991f7d/image.jpg',
+      'https://velog.velcdn.com/images/wlsdk0313/post/b9f2d439-807f-4c4c-a217-61138c2f365a/image.jpg',
     ],
     type: 'Double Room',
     number: 102,

@@ -32,7 +32,7 @@ const ImageSwiper: React.FC<TProps> = ({
   return (
     <StyledImgView loaded={loaded} className={className}>
       <Image
-        layout="fill"
+        fill
         onError={() => setImgError(true)}
         onLoadingComplete={() => setLoaded(true)}
         {...props}
@@ -52,4 +52,9 @@ const StyledImgView = styled.div<StyledType>`
     opacity: ${loaded ? 1 : 0};
     animation: ${loaded ? fadeIn : null} 0.3s forwards;
   `}
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
 `;
