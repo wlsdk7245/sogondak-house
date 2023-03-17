@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import styled, { css } from 'styled-components';
 import { fadeIn } from 'app.styled/keyframes';
 import Image from 'next/image';
@@ -29,12 +29,17 @@ const ImageSwiper: React.FC<TProps> = ({
     return <div className="coupon-text"></div>;
   }
 
+  useEffect(() => {
+    setTimeout(() => {
+      setLoaded(true);
+    }, 3000);
+  }, []);
+
   return (
     <StyledImgView loaded={loaded} className={className}>
       <img
         width={width}
         height={height}
-        onLoad={() => setLoaded(true)}
         onError={() => setImgError(true)}
         loading="lazy"
         {...props}

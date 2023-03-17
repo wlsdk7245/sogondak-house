@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import styled from 'styled-components';
 import { SwiperSlide } from 'swiper/react';
 import SwiperPhoto from 'app.components/SwiperPhoto/SwiperPhoto';
 import ImageSwiper from 'app.components/Image/ImageSwiper';
+import { useLoadImages } from 'app.modules/useLoadImages';
 
 const ArrImage = [
   'https://velog.velcdn.com/images/wlsdk0313/post/7ceaa03b-448c-492a-8cd2-273265cd9e30/image.jpg',
@@ -13,7 +14,17 @@ const ArrImage = [
   'https://velog.velcdn.com/images/wlsdk0313/post/ecc371f6-9f7f-48c6-948d-f209ab29d292/image.JPG',
 ];
 
-const ScreenHome = () => {
+const ScreenHome = (props) => {
+  console.log(props);
+
+  useEffect(() => {
+    async () => {
+      const res = await fetch('/api/room');
+      const roomImages = await res.json();
+      console.log(roomImages);
+    };
+  }, []);
+
   return (
     <StyledWrapper>
       <SwiperPhoto>
@@ -113,3 +124,10 @@ const StyledWrapper = styled.div`
 `;
 
 export default ScreenHome;
+
+export async function getStaticProps() {
+  const res = await fetch('/api/room');
+  const roomImages = await res.json();
+
+  return { props: { roomImages } };
+}
