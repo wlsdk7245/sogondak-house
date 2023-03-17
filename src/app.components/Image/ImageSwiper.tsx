@@ -47,6 +47,7 @@ export default ImageSwiper;
 type StyledType = {
   loaded: boolean;
 };
+
 const StyledImgView = styled.div<StyledType>`
   ${({ loaded }) => css`
     opacity: ${loaded ? 1 : 0};

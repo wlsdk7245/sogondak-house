@@ -52,6 +52,10 @@ const StyledWrapper = styled.div`
   @media (max-width: 1024px) {
     flex-direction: column;
 
+    img {
+      width: 100%;
+      height: 100%;
+    }
     .room-info-wrap {
       white-space: unset !important;
       width: 100% !important;

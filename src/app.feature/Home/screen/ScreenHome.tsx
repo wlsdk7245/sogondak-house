@@ -4,16 +4,22 @@ import { SwiperSlide } from 'swiper/react';
 import SwiperPhoto from 'app.components/SwiperPhoto/SwiperPhoto';
 import ImageSwiper from 'app.components/Image/ImageSwiper';
 
+const ArrImage = [
+  'https://velog.velcdn.com/images/wlsdk0313/post/7ceaa03b-448c-492a-8cd2-273265cd9e30/image.jpg',
+  'https://velog.velcdn.com/images/wlsdk0313/post/92fa3814-fb46-4462-a940-fe43120e17af/image.jpg',
+  'https://velog.velcdn.com/images/wlsdk0313/post/6798476a-cfba-4e5a-86f7-c429822aaaf3/image.jpg',
+  'https://velog.velcdn.com/images/wlsdk0313/post/b86158e9-1bb8-4517-bed7-7df6173e8998/image.jpg',
+  'https://velog.velcdn.com/images/wlsdk0313/post/19586d6d-f155-49c1-845f-8ecbb7953b3a/image.jpg',
+  'https://velog.velcdn.com/images/wlsdk0313/post/ecc371f6-9f7f-48c6-948d-f209ab29d292/image.JPG',
+];
+
 const ScreenHome = () => {
   return (
     <StyledWrapper>
       <SwiperPhoto>
-        {Array.from({ length: 6 }, (x, i) => i + 1).map((item) => (
-          <SwiperSlide key={`main-image-${item}`}>
-            <ImageSwiper
-              src={`/images/home/main_${item}.jpg`}
-              alt={`main-image-${item}`}
-            />
+        {ArrImage.map((item, idx) => (
+          <SwiperSlide key={`main-image-${idx}`}>
+            <ImageSwiper src={item} alt={`main-image-${idx}`} />
           </SwiperSlide>
         ))}
       </SwiperPhoto>
