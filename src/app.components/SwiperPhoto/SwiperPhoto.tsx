@@ -35,10 +35,11 @@ const StyledWrapper = styled(Swiper)`
   width: 100%;
   flex: 1;
   aspect-ratio: 3 / 4 !important;
+  height: 100%;
 
   img {
-    aspect-ratio: 3 / 4 !important;
     height: 100%;
+    aspect-ratio: 3 / 4 !important;
     object-fit: cover;
   }
 
