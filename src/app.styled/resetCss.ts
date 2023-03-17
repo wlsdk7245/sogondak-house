@@ -93,6 +93,7 @@ const Reset = css`
       Apple SD Gothic Neo, sans-serif;
     vertical-align: baseline;
     box-sizing: border-box;
+    word-break: keep-all;
   }
 
   article,

@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { SwiperSlide } from 'swiper/react';
 import SwiperPhoto from 'app.components/SwiperPhoto/SwiperPhoto';
+import ImageInSwiper from 'app.components/ImageInSwiper/ImageSwiper';
 
 const ScreenRoomCommon = () => {
   return (
@@ -9,7 +10,7 @@ const ScreenRoomCommon = () => {
       <SwiperPhoto>
         {[1, 2, 3, 4, 5, 6].map((item, idx) => (
           <SwiperSlide key={`main-image-${idx}`}>
-            <img
+            <ImageInSwiper
               src={`/images/room/common/common_${item}.jpg`}
               alt={`main-image-${idx}`}
             />

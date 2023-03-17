@@ -21,6 +21,11 @@
       "app.styled/*": ["app.styled/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "src/app.components/SwiperPhoto"
+  ],
   "exclude": ["node_modules"]
 }

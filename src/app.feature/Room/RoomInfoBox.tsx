@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { typeRoomInfo } from './ObjectRoom';
 import { SwiperSlide } from 'swiper/react';
 import SwiperPhoto from 'app.components/SwiperPhoto/SwiperPhoto';
+import ImageInSwiper from 'app.components/ImageInSwiper/ImageSwiper';
 
 const RoomInfoBox: React.FC<typeRoomInfo> = (props) => {
   const { type, number, desc, people, basic, photo } = props;
@@ -13,7 +14,7 @@ const RoomInfoBox: React.FC<typeRoomInfo> = (props) => {
         <div>
           {Array.from({ length: photo }, (x, i) => i + 1).map((item) => (
             <SwiperSlide key={`room-${number}-image-${item}`}>
-              <img
+              <ImageInSwiper
                 src={`/images/room/${number}/${number}_${item}.jpg`}
                 alt={`room-${number}-image-${item}`}
               />
@@ -21,16 +22,19 @@ const RoomInfoBox: React.FC<typeRoomInfo> = (props) => {
           ))}
         </div>
       </SwiperPhoto>
-
       <div className="room-info-wrap">
         <div className="room-type">{type}</div>
         <div className="room-number">{number}</div>
         <div className="room-desc">{desc}</div>
-        <div className="room-people">이용 인원 : {people}</div>
-        <div className="room-basic">기본 비품 안내 : {basic}</div>
+        <div className="room-people">
+          <b>이용 인원</b> : {people}
+        </div>
+        <div className="room-basic">
+          <b>기본 비품 안내</b> : {basic}
+        </div>
         <div className="room-common">
-          휴게공간 공용 비품 안내 : 정수기, 전자레인지, 토스트기, 커피포트, 각종
-          식기류.
+          <b>휴게공간 공용 비품 안내</b> : 정수기, 전자레인지, 토스트기,
+          커피포트, 각종 식기류.
         </div>
       </div>
     </StyledWrapper>
@@ -49,7 +53,6 @@ const StyledWrapper = styled.div`
     flex-direction: column;
 
     .room-info-wrap {
-      white-space: unset !important;
       width: 100% !important;
       max-width: unset !important;
       min-width: unset !important;
