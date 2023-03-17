@@ -95,11 +95,11 @@ const StyledWrapper = styled.div`
 
   .refund-info-wrap {
     display: flex;
+    flex-wrap: wrap;
     gap: 80px;
 
     @media (max-width: 768px) {
       gap: 40px;
-      flex-direction: column;
     }
 
     .refund-info {

@@ -1,10 +1,17 @@
 import React, { useEffect, useRef } from 'react';
 import styled from 'styled-components';
+import { CopyOutlined } from '@ant-design/icons';
 
 declare let naver: any;
 
 const AboutMap = () => {
   const mapRef = useRef<HTMLElement | null | any>(null);
+
+  const handleCopyAddress = () => {
+    navigator.clipboard.writeText(
+      '제주특별자치도 제주시 조천읍 신북로497, 소곤닥하우스'
+    );
+  };
 
   useEffect(() => {
     const latLng = new naver.maps.LatLng(33.542845, 126.6633064);
@@ -14,9 +21,14 @@ const AboutMap = () => {
       zoom: 15, //지도의 초기 줌 레벨            draggable: false,
     });
 
-    new naver.maps.Marker({
+    let marker = new naver.maps.Marker({
       position: latLng,
       map: mapRef.current,
+    });
+
+    naver.maps.Event.addListener(marker, 'click', () => {
+      let url = 'https://map.naver.com/v5/entry/place/1659523223?c=20,0,0,0,dh';
+      window.open(url);
     });
   }, []);
 
@@ -24,7 +36,8 @@ const AboutMap = () => {
     <StyledWrapper>
       <div id="map"></div>
       <div className="address">
-        제주특별자치도 제주시 조천읍 신북로497, 소곤닥하우스
+        <div>제주특별자치도 제주시 조천읍 신북로497, 소곤닥하우스</div>
+        <CopyOutlined onClick={handleCopyAddress} className="copy-button" />
       </div>
     </StyledWrapper>
   );
@@ -51,10 +64,18 @@ const StyledWrapper = styled.div`
   }
 
   .address {
+    font-family: 'Noto Sans KR';
     color: var(--color-main);
     font-size: 13px;
     text-align: center;
-    font-family: Noto Sans;
-    font-weight: 700;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+
+    .copy-button {
+      cursor: pointer;
+    }
   }
 `;

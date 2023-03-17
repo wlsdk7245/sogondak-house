@@ -4,10 +4,14 @@ import { Collapse } from 'antd';
 
 const { Panel } = Collapse;
 
-const ReservationPanelCost = () => {
+type TProps = {
+  isMobile: boolean;
+};
+
+const ReservationPanelCost: React.FC<TProps> = ({ isMobile }) => {
   return (
     <StyledWrapper>
-      <Collapse ghost accordion>
+      <Collapse ghost accordion={isMobile}>
         <Panel key="1" header="비수기">
           <img src="/images/reservation/비수기.jpeg" />
         </Panel>
