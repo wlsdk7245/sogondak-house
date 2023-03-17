@@ -10,7 +10,7 @@ type TProps = {
   height?: number;
   style?: object | any;
   className?: string;
-  alt?: string;
+  alt: string;
   onLoad?: () => void;
   onError?: () => void;
   onClick?: () => void;
