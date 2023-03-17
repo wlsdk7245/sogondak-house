@@ -4,12 +4,19 @@ export type typeRoomInfo = {
   desc: string;
   people: string;
   basic: string;
-  photo: number;
+  photo: string[];
 };
 
 export const ObjectRoom = {
   101: {
-    photo: 6,
+    photo: [
+      'https://velog.velcdn.com/images/wlsdk0313/post/4fc07dcf-a72e-4d48-a49a-41e09b9e0468/image.jpg',
+      'https://velog.velcdn.com/images/wlsdk0313/post/666f1c47-cf30-4629-a44d-ef19940f8177/image.jpg',
+      'https://velog.velcdn.com/images/wlsdk0313/post/8db291b9-7923-4c8b-9d26-91dafbc21d4b/image.jpg',
+      'https://velog.velcdn.com/images/wlsdk0313/post/f9b24200-d85d-40c0-94bc-2f36b36e82cf/image.jpg',
+      'https://velog.velcdn.com/images/wlsdk0313/post/9e04292b-c332-4881-8c0e-41b866ab5387/image.jpg',
+      'https://velog.velcdn.com/images/wlsdk0313/post/dd9f1403-334d-4bc1-93ab-bf99bb3068ba/image.jpg',
+    ],
     type: 'Single Room',
     number: 101,
     desc: '백 패커 분들이 많이 찾아주시는 1인실 입니다.',
@@ -18,7 +25,9 @@ export const ObjectRoom = {
       '싱글 사이즈 매트리스 침대, TV, 에어컨 (냉/난방), 미니냉장고, 드라이기, 수건, 샴푸, 바디 클렌져, 두루마리 휴지, 갑티슈, 삼다수 1병.',
   },
   102: {
-    photo: 6,
+    photo: [
+      'https://velog.velcdn.com/images/wlsdk0313/post/4fc07dcf-a72e-4d48-a49a-41e09b9e0468/image.jpg',
+    ],
     type: 'Double Room',
     number: 102,
     desc: '1-2인이 편안하게 쉬기 좋은 규모의 객실입니다.',
@@ -27,7 +36,9 @@ export const ObjectRoom = {
       '퀸 사이즈 매트리스 침대, TV, 에어컨 (냉/난방), 미니냉장고, 드라이기, 수건, 샴푸, 바디 클렌져, 두루마리 휴지, 갑티슈, 삼다수 1병.',
   },
   201: {
-    photo: 10,
+    photo: [
+      'https://velog.velcdn.com/images/wlsdk0313/post/4fc07dcf-a72e-4d48-a49a-41e09b9e0468/image.jpg',
+    ],
     type: 'Deluxe Room',
     number: 201,
     desc: '1.5룸형 구조의 객실로 거실겸 주방과 침실 그리고 테라스로 구성되어있습니다.',
@@ -36,7 +47,9 @@ export const ObjectRoom = {
       '퀸 사이즈 매트리스 침대, TV, 에어컨 (냉/난방), 미니냉장고, 드라이기, 수건, 샴푸, 바디 클렌져, 두루마리 휴지, 갑티슈, 삼다수 1병.',
   },
   202: {
-    photo: 7,
+    photo: [
+      'https://velog.velcdn.com/images/wlsdk0313/post/4fc07dcf-a72e-4d48-a49a-41e09b9e0468/image.jpg',
+    ],
     type: 'Deluxe Room',
     number: 202,
     desc: '원룸형 구조로 취사 가능한 객실 중 한달살이 예약이 가장 많습니다.',
@@ -45,7 +58,9 @@ export const ObjectRoom = {
       '퀸 사이즈 매트리스 침대, TV, 에어컨 (냉/난방), 미니냉장고, 드라이기, 수건, 샴푸, 바디 클렌져, 두루마리 휴지, 갑티슈, 삼다수 1병.',
   },
   203: {
-    photo: 12,
+    photo: [
+      'https://velog.velcdn.com/images/wlsdk0313/post/4fc07dcf-a72e-4d48-a49a-41e09b9e0468/image.jpg',
+    ],
     type: 'Deluxe Room',
     number: 203,
     desc: '천창이 특징인 복층형 객실입니다. 계단이 가팔라서 안전상의 각별한 유의가 필요합니다.',
@@ -54,7 +69,9 @@ export const ObjectRoom = {
       '퀸 사이즈 매트리스 침대, TV, 에어컨 (냉/난방), 미니냉장고, 드라이기, 수건, 샴푸, 바디 클렌져, 두루마리 휴지, 갑티슈, 삼다수 1병.',
   },
   204: {
-    photo: 9,
+    photo: [
+      'https://velog.velcdn.com/images/wlsdk0313/post/4fc07dcf-a72e-4d48-a49a-41e09b9e0468/image.jpg',
+    ],
     type: 'Double Room',
     number: 204,
     desc: '1-2인이 편안하게 쉬기 좋은 규모의 객실입니다.',

@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import { SwiperSlide } from 'swiper/react';
 import SwiperPhoto from 'app.components/SwiperPhoto/SwiperPhoto';
 import ImageSwiper from 'app.components/Image/ImageSwiper';
-import { useLoadImages } from 'app.modules/useLoadImages';
 
 const ArrImage = [
   'https://velog.velcdn.com/images/wlsdk0313/post/7ceaa03b-448c-492a-8cd2-273265cd9e30/image.jpg',

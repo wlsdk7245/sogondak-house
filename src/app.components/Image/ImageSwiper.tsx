@@ -18,18 +18,12 @@ type TProps = {
 
 const ImageSwiper: React.FC<TProps> = ({
   className,
-  width = 300,
-  height = 400,
+  width = 30000,
+  height = 40000,
   ...props
 }) => {
   const [imgError, setImgError] = useState(false);
   const [loaded, setLoaded] = useState(false);
-
-  useEffect(() => {
-    setTimeout(() => {
-      setLoaded(true);
-    }, 3000);
-  }, []);
 
   if (imgError || !props.src) {
     return <div className="coupon-text"></div>;
@@ -37,11 +31,10 @@ const ImageSwiper: React.FC<TProps> = ({
 
   return (
     <StyledImgView loaded={loaded} className={className}>
-      <img
-        width={width}
-        height={height}
+      <Image
+        layout="fill"
         onError={() => setImgError(true)}
-        loading="lazy"
+        onLoadingComplete={() => setLoaded(true)}
         {...props}
       />
     </StyledImgView>

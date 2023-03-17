@@ -12,12 +12,9 @@ const RoomInfoBox: React.FC<typeRoomInfo> = (props) => {
     <StyledWrapper>
       <SwiperPhoto>
         <div>
-          {Array.from({ length: photo }, (x, i) => i + 1).map((item) => (
-            <SwiperSlide key={`room-${number}-image-${item}`}>
-              <ImageSwiper
-                src={`/images/room/${number}/${number}_${item}.jpg`}
-                alt={`room-${number}-image-${item}`}
-              />
+          {photo.map((item, idx) => (
+            <SwiperSlide key={`room-${number}-image-${idx}`}>
+              <ImageSwiper src={item} alt={`room-${number}-image-${idx}`} />
             </SwiperSlide>
           ))}
         </div>
