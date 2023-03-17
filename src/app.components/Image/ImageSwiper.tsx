@@ -29,7 +29,8 @@ const ImageSwiper: React.FC<TProps> = ({
   const handleLoad = () => setLoaded(true);
 
   useEffect(() => {
-    if (image?.current.complete) setLoaded(true);
+    if (image.current === undefined) return;
+    setLoaded(true);
   }, [image.current]);
 
   if (imgError || !props.src) {
