@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { SwiperSlide } from 'swiper/react';
 import SwiperPhoto from 'app.components/SwiperPhoto/SwiperPhoto';
-import ImageInSwiper from 'app.components/ImageInSwiper/ImageSwiper';
+import ImageSwiper from 'app.components/Image/ImageSwiper';
 
 const ScreenHome = () => {
   return (
@@ -10,7 +10,7 @@ const ScreenHome = () => {
       <SwiperPhoto>
         {Array.from({ length: 6 }, (x, i) => i + 1).map((item) => (
           <SwiperSlide key={`main-image-${item}`}>
-            <ImageInSwiper
+            <ImageSwiper
               src={`/images/home/main_${item}.jpg`}
               alt={`main-image-${item}`}
             />

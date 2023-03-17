@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { typeRoomInfo } from './ObjectRoom';
 import { SwiperSlide } from 'swiper/react';
 import SwiperPhoto from 'app.components/SwiperPhoto/SwiperPhoto';
-import ImageInSwiper from 'app.components/ImageInSwiper/ImageSwiper';
+import ImageSwiper from 'app.components/Image/ImageSwiper';
 
 const RoomInfoBox: React.FC<typeRoomInfo> = (props) => {
   const { type, number, desc, people, basic, photo } = props;
@@ -14,7 +14,7 @@ const RoomInfoBox: React.FC<typeRoomInfo> = (props) => {
         <div>
           {Array.from({ length: photo }, (x, i) => i + 1).map((item) => (
             <SwiperSlide key={`room-${number}-image-${item}`}>
-              <ImageInSwiper
+              <ImageSwiper
                 src={`/images/room/${number}/${number}_${item}.jpg`}
                 alt={`room-${number}-image-${item}`}
               />
