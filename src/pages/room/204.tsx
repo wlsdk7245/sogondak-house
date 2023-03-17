@@ -1,15 +1,15 @@
-import ScreenRoom101 from 'app.feature/Room/ScreenRoom101';
 import React from 'react';
 import styled from 'styled-components';
+import ScreenRoom204 from 'app.feature/Room/ScreenRoom204';
 
-const PageRoom101 = () => {
+const PageRoom204 = () => {
   return (
     <StyledWrapper>
-      <ScreenRoom101 />
+      <ScreenRoom204 />
     </StyledWrapper>
   );
 };
 
 const StyledWrapper = styled.div``;
 
-export default PageRoom101;
+export default PageRoom204;

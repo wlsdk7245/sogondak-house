@@ -1,9 +1,23 @@
 import { createGlobalStyle } from 'styled-components';
-import resetCSS from './resetCss';
+import Reset from './resetCss';
 
 export const GlobalStyle = createGlobalStyle`
     :root {
-        --color-main: #e1e1e1;
+        --color-main: #FF008C;
+        --color-main-hover: #ff008c47; 
+        --color-sub: #628AED;
+        --color-white-hover: #ffffffa1;
     }
-    ${resetCSS};    
+
+    body {
+        width: 100%;
+          &::-webkit-scrollbar {
+        display: none;
+        }
+    }
+
+    
+    ${Reset};    
+
+
 `;

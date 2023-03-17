@@ -1,7 +1,7 @@
+import Footer from 'app.components/Footer/Footer';
+import Header from 'app.components/Header/Header';
 import React from 'react';
 import styled from 'styled-components';
-import Footer from '../Footer/Footer';
-import Header from '../Header/Header';
 
 type TProps = {
   children: JSX.Element;
@@ -22,14 +22,12 @@ export default Layout;
 const StyledWrapper = styled.div`
   height: 100%;
   width: 100%;
+  min-width: 280px;
 
   .layout-content {
+    width: 100%;
     margin: 0 auto;
     height: 100%;
-    min-height: calc(100vh - 110px);
-
-    /* @media only screen and (max-width: 1024px) {
-      min-height: calc(100vh - 120px);
-    } */
+    min-height: calc(100vh - 112px);
   }
 `;
