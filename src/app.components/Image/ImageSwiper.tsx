@@ -39,9 +39,10 @@ const ImageSwiper: React.FC<TProps> = ({
 
   return (
     <StyledImgView loaded={loaded} className={className}>
-      <img
+      <Image
+        fill
         ref={image}
-        onLoad={handleLoad}
+        onLoadingComplete={handleLoad}
         onError={() => setImgError(true)}
         {...props}
       />
