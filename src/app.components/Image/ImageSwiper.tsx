@@ -25,15 +25,15 @@ const ImageSwiper: React.FC<TProps> = ({
   const [imgError, setImgError] = useState(false);
   const [loaded, setLoaded] = useState(false);
 
-  if (imgError || !props.src) {
-    return <div className="coupon-text"></div>;
-  }
-
   useEffect(() => {
     setTimeout(() => {
       setLoaded(true);
     }, 3000);
   }, []);
+
+  if (imgError || !props.src) {
+    return <div className="coupon-text"></div>;
+  }
 
   return (
     <StyledImgView loaded={loaded} className={className}>
