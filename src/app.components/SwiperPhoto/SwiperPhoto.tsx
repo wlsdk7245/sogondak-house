@@ -37,6 +37,7 @@ const StyledWrapper = styled(Swiper)`
   aspect-ratio: 3 / 4 !important;
 
   img {
+    aspect-ratio: 3 / 4 !important;
     height: 100%;
     object-fit: cover;
   }
