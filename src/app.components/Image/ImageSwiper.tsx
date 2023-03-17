@@ -42,6 +42,8 @@ const ImageSwiper: React.FC<TProps> = ({
       <Image
         fill
         ref={image}
+        placeholder="blur"
+        blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNMzUqtBwAEJQG1gGP2uwAAAABJRU5ErkJggg=="
         onLoadingComplete={handleLoad}
         onError={() => setImgError(true)}
         loading="lazy"
