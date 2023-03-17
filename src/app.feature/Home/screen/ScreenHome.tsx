@@ -1,32 +1,22 @@
-import Link from 'next/link';
 import React from 'react';
 import styled from 'styled-components';
-import { Carousel } from 'antd';
-import Image from 'next/image';
-
-const ArrImage = [
-  'https://velog.velcdn.com/images/wlsdk0313/post/00a14981-8942-422f-bc70-0799559b1dd0/image.jpeg',
-  'https://velog.velcdn.com/images/wlsdk0313/post/0a23d637-5b9d-4a36-bdff-45ac0fe8025b/image.jpeg',
-  'https://velog.velcdn.com/images/wlsdk0313/post/3df472b8-ee57-4572-a839-ab0f8c880ba9/image.jpeg',
-  'https://velog.velcdn.com/images/wlsdk0313/post/7f199a21-e4c5-42c5-84fc-c6ec775ee6b8/image.jpeg',
-  'https://velog.velcdn.com/images/wlsdk0313/post/7dc36b43-9e44-436c-b570-7b85c3c5e274/image.jpeg',
-];
+import { SwiperSlide } from 'swiper/react';
+import SwiperPhoto from 'app.components/SwiperPhoto/SwiperPhoto';
 
 const ScreenHome = () => {
   return (
     <StyledWrapper>
-      <Carousel autoplay effect="fade">
-        {ArrImage.map((img, idx) => (
-          <Image
-            placeholder="blur"
-            key={`main-image-${idx}`}
-            alt={`main-image-${idx}`}
-            fill
-            src={img}
-            blurDataURL={img}
-          />
+      <SwiperPhoto>
+        {Array.from({ length: 6 }, (x, i) => i + 1).map((item) => (
+          <SwiperSlide key={`main-image-${item}`}>
+            <img
+              src={`/images/home/main_${item}.jpg`}
+              alt={`main-image-${item}`}
+            />
+          </SwiperSlide>
         ))}
-      </Carousel>
+      </SwiperPhoto>
+
       <div className="description">
         <div className="desc-part">
           아름다운 섬 제주 동쪽, <br className="mobile-br" />
@@ -53,22 +43,41 @@ const ScreenHome = () => {
 };
 
 const StyledWrapper = styled.div`
-  width: 100%;
   color: gray;
+  width: 100%;
   position: responsive;
+  display: flex;
+  flex-wrap: wrap;
 
-  .ant-carousel {
-    height: calc(100vh - 112px);
+  .swiper {
+    width: 100%;
+    flex: 1;
+    aspect-ratio: 3 / 4 !important;
   }
 
   img {
-    position: relative !important;
+    height: 100%;
     object-fit: cover;
-    height: calc(100vh - 112px) !important;
-    object-position: bottom;
+  }
+
+  @media (max-width: 1024px) {
+    flex-direction: column;
+
+    .swiper {
+      width: 100vw !important;
+      height: calc(100vw * 4 / 3) !important;
+    }
+
+    .room-info-wrap {
+      white-space: unset !important;
+      width: 100% !important;
+      max-width: unset !important;
+      min-width: unset !important;
+    }
   }
 
   .description {
+    flex: 1;
     padding: 100px 40px;
     align-items: center;
     justify-content: center;

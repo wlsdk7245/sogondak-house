@@ -68,7 +68,12 @@ const HeaderRoomModal: React.FC<TProps> = ({ handleOpenChange }) => {
         </div>
       </div>
       <div className="room-item-wrap">
-        <div className="room-item content">common space</div>
+        <div
+          className="room-item content"
+          onClick={handleClickRoom('/room/common')}
+        >
+          common space
+        </div>
       </div>
     </StyledWrapper>
   );

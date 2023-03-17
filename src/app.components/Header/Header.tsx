@@ -43,7 +43,9 @@ const Header = () => {
           open={isOpenDropdown}
           onOpenChange={handleOpenChange}
         >
-          <div className={`menu-item ${router.pathname === '/room'}`}>ROOM</div>
+          <div className={`menu-item ${router.pathname.includes('room')}`}>
+            ROOM
+          </div>
         </Dropdown>
         <Link
           href="/reservation"
@@ -62,7 +64,7 @@ const StyledWrapper = styled.div`
   position: sticky;
   top: 0;
   left: 0;
-  z-index: 100;
+  z-index: 1000;
 
   .ant-menu-horizontal {
     height: 40px;

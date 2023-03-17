@@ -1,10 +1,17 @@
+import ScreenRoomCommon from 'app.feature/Room/ScreenRoomCommon';
 import React from 'react';
 import styled from 'styled-components';
 
 const PageRoomCommon = () => {
-  return <StyledWrapper></StyledWrapper>;
+  return (
+    <StyledWrapper>
+      <ScreenRoomCommon />
+    </StyledWrapper>
+  );
 };
 
-const StyledWrapper = styled.div``;
-
 export default PageRoomCommon;
+
+const StyledWrapper = styled.div`
+  width: 100%;
+`;
