@@ -44,6 +44,7 @@ const ImageSwiper: React.FC<TProps> = ({
         ref={image}
         onLoadingComplete={handleLoad}
         onError={() => setImgError(true)}
+        loading="lazy"
         {...props}
       />
     </StyledImgView>
@@ -63,6 +64,8 @@ const StyledImgView = styled.div<StyledType>`
   `}
 
   img {
+    transform: rotate(90deg);
+    overflow: initial;
     width: 100%;
     height: 100%;
   }
