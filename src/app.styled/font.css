@@ -3,3 +3,9 @@
   src: url('./ITC Avant Garde Gothic Book Regular.otf') format('opentype');
   font-weight: bold;
 }
+
+@font-face {
+  font-family: 'gothicBookMedium';
+  src: url('./ITCAvantGardeStd-Md.ttf') format('opentype');
+  font-weight: bold;
+}

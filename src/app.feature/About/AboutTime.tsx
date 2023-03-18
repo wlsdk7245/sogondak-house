@@ -11,7 +11,7 @@ const AboutTime = () => {
         <div className="time-item">11: 00</div>
       </div>
       <div className="time-info">
-        * 레이트 체크아웃은 10,000원의 추가요금이 발생합니다.
+        * 레이트 체크아웃은 시간당 10,000원의 추가요금이 발생합니다.
       </div>
     </StyledWrapper>
   );

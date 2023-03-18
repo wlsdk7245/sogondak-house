@@ -40,6 +40,9 @@ const ScreenReservation = () => {
           alt="airbnb"
           width={30}
           height={30}
+          onClick={() =>
+            window.open('https://www.airbnb.co.kr/users/300970932/listings')
+          }
         />
         <Image
           className="platform-image"
@@ -47,6 +50,11 @@ const ScreenReservation = () => {
           alt="naver"
           width={30}
           height={30}
+          onClick={() =>
+            window.open(
+              'https://map.naver.com/v5/entry/place/1659523223?lng=126.6633064&lat=33.542845&placePath=%2Froom&c=15,0,0,0,dh'
+            )
+          }
         />
         <Image
           className="platform-image"
@@ -54,6 +62,9 @@ const ScreenReservation = () => {
           alt="instagram"
           width={30}
           height={30}
+          onClick={() =>
+            window.open('https://www.instagram.com/sogondak_house/')
+          }
         />
       </div>
     </StyledWrapper>
@@ -70,12 +81,18 @@ const StyledWrapper = styled.div`
   .platform-container {
     display: flex;
     justify-content: center;
-    gap: 12px;
+    gap: 20px;
 
     .platform-image {
+      cursor: pointer;
       width: 20px;
       height: 20px;
-      opacity: 0.5;
+      opacity: 0.7;
+      transition: 200ms;
+
+      &:hover {
+        opacity: 0.5;
+      }
     }
   }
 
