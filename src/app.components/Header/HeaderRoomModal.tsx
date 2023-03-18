@@ -69,7 +69,7 @@ const HeaderRoomModal: React.FC<TProps> = ({ handleOpenChange }) => {
       </div>
       <div className="room-item-wrap">
         <div
-          className="room-item content"
+          className="room-item content title"
           onClick={handleClickRoom('/room/common')}
         >
           common space
@@ -104,6 +104,11 @@ const StyledWrapper = styled.div`
 
   .room-item-wrap {
     .room-item {
+      &.title {
+        font-size: 16px;
+        font-weight: 800;
+      }
+
       &.content {
         transition: 200ms;
         cursor: pointer;

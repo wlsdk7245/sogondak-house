@@ -28,7 +28,7 @@ export default Footer;
 
 const StyledWrapper = styled.div`
   height: 120px;
-  font-size: 8px;
+  font-size: 11px;
   color: gray;
   display: flex;
   flex-direction: column;
