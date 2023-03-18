@@ -27,12 +27,13 @@ const Footer = () => {
 export default Footer;
 
 const StyledWrapper = styled.div`
-  height: 120px;
+  height: 200px;
+  padding-bottom: 40px;
   font-size: 11px;
   color: gray;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: end;
   gap: 8px;
 
   .footer-info-wrap {

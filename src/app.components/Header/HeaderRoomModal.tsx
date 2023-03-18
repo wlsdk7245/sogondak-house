@@ -107,6 +107,7 @@ const StyledWrapper = styled.div`
       &.title {
         font-size: 16px;
         font-weight: 800;
+        font-family: 'gothicBookMedium';
       }
 
       &.content {
