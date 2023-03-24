@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import styled from 'styled-components';
 import { CopyOutlined } from '@ant-design/icons';
+import { message } from 'antd';
 
 declare let naver: any;
 
@@ -8,6 +9,7 @@ const AboutMap = () => {
   const mapRef = useRef<HTMLElement | null | any>(null);
 
   const handleCopyAddress = () => {
+    message.success('주소가 복사되었습니다!');
     navigator.clipboard.writeText(
       '제주특별자치도 제주시 조천읍 신북로497, 소곤닥하우스'
     );
@@ -18,7 +20,8 @@ const AboutMap = () => {
 
     mapRef.current = new naver.maps.Map('map', {
       center: latLng,
-      zoom: 15, //지도의 초기 줌 레벨            draggable: false,
+      zoom: 15, //지도의 초기 줌 레벨
+      // draggable: false,
     });
 
     let marker = new naver.maps.Marker({
