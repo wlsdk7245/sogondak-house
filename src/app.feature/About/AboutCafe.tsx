@@ -7,7 +7,7 @@ const AboutCafe = () => {
       <div className="title">카페 호다</div>
       <div className="content">
         <div>
-          건물 1층에서 함께 운영중인 공간으로, 오전 11시부터 오후 18시까지
+          건물 1층에서 함께 운영 중인 공간으로, 오전 11시부터 오후 18시까지
           열려있습니다.
         </div>
         <div>

@@ -42,11 +42,11 @@ const ScreenHome = (props) => {
           반짝거리는 함덕해변.
           <br />
           나무 한 그루를 감싼 소담스러운 돌집, <br className="mobile-br" />
-          소곤닥 하우스 입니다.
+          소곤닥하우스입니다.
         </div>
         <div className="desc-part">
-          증조 할머니가 사시던 집터에 <br className="mobile-br" />
-          아버지가 건축하신 소곤닥 하우스는 <br />
+          증조할머니가 사시던 집터에 <br className="mobile-br" />
+          아버지가 건축하신 소곤닥하우스는 <br />
           오래된 옛집의 기억과 투숙객분들의 추억을 <br className="mobile-br" />
           켜켜이 소중하게 쌓아가고 있습니다.
         </div>
