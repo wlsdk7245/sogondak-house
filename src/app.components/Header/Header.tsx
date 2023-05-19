@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import { Dropdown } from 'antd';
 import { useRouter } from 'next/router';
 import HeaderRoomModal from './HeaderRoomModal';
+import Image from 'next/image';
 
 const Header = () => {
   const [isOpenDropdown, setIsOpenDropdown] = useState(false);
@@ -18,10 +19,20 @@ const Header = () => {
     <StyledWrapper>
       <div className="header-top">
         <Link href="/" className="logo-left">
-          <img src="/images/common/logo-big.png" />
+          <Image
+            width={99.17}
+            height={72}
+            alt="소곤닥하우스"
+            src="/images/common/logo-big.png"
+          />
         </Link>
         <div className="logo-right">
-          <img src="/images/common/logo-letter-black.png" />
+          <Image
+            width={101.81}
+            height={52}
+            alt="소곤닥하우스"
+            src="/images/common/logo-letter-black.png"
+          />
         </div>
       </div>
 

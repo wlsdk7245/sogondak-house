@@ -11,7 +11,6 @@ export const ObjectRoom = {
   101: {
     photo: [
       'https://velog.velcdn.com/images/wlsdk0313/post/666f1c47-cf30-4629-a44d-ef19940f8177/image.jpg',
-
       'https://velog.velcdn.com/images/wlsdk0313/post/4fc07dcf-a72e-4d48-a49a-41e09b9e0468/image.jpg',
       'https://velog.velcdn.com/images/wlsdk0313/post/8db291b9-7923-4c8b-9d26-91dafbc21d4b/image.jpg',
       'https://velog.velcdn.com/images/wlsdk0313/post/f9b24200-d85d-40c0-94bc-2f36b36e82cf/image.jpg',
