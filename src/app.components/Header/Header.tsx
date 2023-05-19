@@ -18,10 +18,10 @@ const Header = () => {
     <StyledWrapper>
       <div className="header-top">
         <Link href="/" className="logo-left">
-          <img src="/images/common/logo-big.png" />
+          <img alt="소곤닥하우스" src="/images/common/logo-big.png" />
         </Link>
         <div className="logo-right">
-          <img src="/images/common/logo-letter-black.png" />
+          <img alt="소곤닥하우스" src="/images/common/logo-letter-black.png" />
         </div>
       </div>
 
