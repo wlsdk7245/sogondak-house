@@ -10,7 +10,7 @@ const PageHome = () => {
         <title>소곤닥하우스</title>
         <meta
           name="description"
-          content="함덕의 소담스러운 돌담집, 소곤닥하우스 | "
+          content="함덕의 소담스러운 돌담집, 소곤닥하우스"
         />
       </Head>
       <StyledWrapper>
