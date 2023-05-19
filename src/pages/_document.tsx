@@ -49,6 +49,10 @@ class MyDocument extends Document {
             content="함덕의 소담스러운 돌담집, 소곤닥하우스 | 함덕 해변 숙소"
           />
           <meta property="og:title" content="소곤닥하우스" />
+          <meta
+            property="og:description"
+            content="함덕의 소담스러운 돌담집, 소곤닥하우스"
+          />
           <meta property="og:type" content="website" />
           <meta property="og:url" content="https://sogondakhouse.com" />
           <meta name="format-detection" content="no" />
