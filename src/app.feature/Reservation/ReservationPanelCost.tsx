@@ -38,4 +38,8 @@ const StyledWrapper = styled.div`
   .ant-collapse-header-text {
     font-weight: 400 !important;
   }
+
+  img {
+    max-width: 800px;
+  }
 `;
