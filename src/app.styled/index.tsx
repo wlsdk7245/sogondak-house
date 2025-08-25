@@ -3,8 +3,8 @@ import Reset from './resetCss';
 
 export const GlobalStyle = createGlobalStyle`
     :root {
-        --color-main: #FF008C;
-        --color-main-hover: #ff008c47; 
+        --color-main: #00a063;
+        --color-main-hover: #00a06347; 
         --color-sub: #628AED;
         --color-white-hover: #ffffffa1;
     }
